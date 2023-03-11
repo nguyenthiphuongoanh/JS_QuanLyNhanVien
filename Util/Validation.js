@@ -81,4 +81,14 @@ function Validation () {
         return false;
     }
 
+    this.kiemTraChucVuHopLe = function (value,idError) {
+        var postionList = ['Nhân viên', 'Trưởng phòng', 'Giám đốc'];
+        if(postionList.includes(value)){
+            document.getElementById(idError).innerHTML = '';
+            return true;
+        }
+        document.getElementById(idError).innerHTML = `Vui lòng chọn chức vụ`;
+        return false;
+    }
+
 }
